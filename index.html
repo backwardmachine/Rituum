@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Rituum</title>
+<link href="rtm.css" rel="stylesheet">
+<script src="rtm.js"></script>
+</head>
+<body>
+<div id="rtma">
+
+</div>
+<div id="rtmb">
+
+</div>
+<script language="javascript">
+  var rituum = new neodna__Rituum();
+  rituum.init   ();
+  rituum.nest   ( "rtma" );
+  rituum.mode   ( __RTM__NUCLEOTIDE );
+  rituum.set    ( 'CCTACATTTCCTTTATTCATATTCTTTTTATTTTCTTGCCAATTCC' );
+  rituum.width  ( 14 );
+  rituum.length ( 64 );
+  rituum.range  ( 5, 35 );
+  var str = rituum.blob();
+  console.log( 'blob=', str );
+  var str = rituum.window();
+  console.log( 'window=', str );
+  var str = rituum.selected();
+  console.log( 'selected=', str );
+  rituum.draw( 1 );
+/*
+  rituum.offset ( 10 );
+  rituum.range  ( 5, 35 );
+  rituum.palette(
+    '#ffffff', '#000000', '#333333', '#cfeefa',
+    '#ffffff', '#f0e0ff', '#95c9de', '#e6d5d9',
+    '#dedbd3'
+  );
+  rituum.draw( 1 );
+*/
+
+  var rtma = new neodna__Rituum();
+  rtma.init();
+  rtma.nest( "rtma" );
+  rtma.words( 2, 'CGTA' );
+  rtma.set( 'CCTACATTTCCTTTATTCATATTCTTTTTATTT'
+          + 'TCTTGCCAATTCCCTAATGGCATGCGCCAACGG'
+          + 'CAACGGCAATGCCAACGGTCTCTGCA' );
+  rtma.offset( 16 );
+  rtma.draw( 1 );
+
+  var rtmb = new neodna__Rituum();
+  rtmb.init();
+  rtmb.nest( "rtmb" );
+  rtmb.words( 2, 'ACGT' );
+  rtmb.set( 'CGTTATTTTATTGCA' );
+  rtmb.draw( 1 );
+</script>
+</body>
+</html>
