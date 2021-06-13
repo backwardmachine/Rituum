@@ -9,7 +9,7 @@ To get started include the minified javascript file `rtm.js` in your header.
 <script src="rtm.js"></script>
 ```
 
-You need a HTML containing element for each sequence. Make an element `<div id="container"></div>` and the rituum will nest inside of it.
+You need a HTML containing element for each sequence. Make an element `<div id="container"></div>` and the rituum will nest nicely inside of it.
 ```js
 var rituum = new neodna__Rituum();
 rituum.init();
