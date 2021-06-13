@@ -27,3 +27,25 @@ We can input our sequence quickly and draw it on the page.
 rituum.set( 'CCTACATTTCCTTTATTCATATTCTTTTTATTTTCTTGCCAATTCC' );
 rituum.draw( 1 );
 ```
+
+# Commands
+To get the raw contents of the Rituum.
+```js
+var str = rituum.blob();
+```
+
+To get the contents of the Rituum window
+```js
+var str = rituum.window();
+```
+
+To get the contents of the current selection made with the mouse.
+```js
+var str = rituum.selection();
+```
+
+Note you can set the mode by clicking on the `m`. This toggles between __RTM__NUCLEOTIDE and __RTM__BINARY.
+
+# Copy and paste
+Although the Rituum is drawn on canvas, you can still copy and paste using a selection you make with the mouse, 
+or by clicking on the `c` button. This will copy the contents of any specific Rituum onto the clipboard.
