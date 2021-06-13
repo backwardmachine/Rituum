@@ -79,3 +79,5 @@ And we can select a range on the widget which allows us to use `selected()`
 ```js
 rituum.range( 5, 35 );
 ```
+
+A work in progress. Thanks for taking a look.
