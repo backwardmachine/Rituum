@@ -49,3 +49,33 @@ Note you can set the mode by clicking on the `m`. This toggles between __RTM__NU
 # Copy and paste
 Although the Rituum is drawn on canvas, you can still copy and paste using a selection you make with the mouse, 
 or by clicking on the `c` button. This will copy the contents of any specific Rituum onto the clipboard.
+
+# Words
+The power of the widget is being able to change the words used. Here you can add your own base language, ie. the default is `ACGT` and would be set like this
+```js
+rituum.words( 2, 'ACGT' );
+```
+so when we click `m` we toggle through the modes we have added also.
+```js
+rituum.words( 2, 'CGTA' );
+rituum.words( 3, 'ABCDEFGH' );
+rituum.words( 4, 'ABCDEFGHIJKLMNOP' );
+```
+
+# Width
+We can change the width of the widget
+```js
+rituum.width( 28 );
+```
+
+# Length
+And the total length of the widget's main window
+```js
+rituum.length( 64 );
+```
+
+# Range
+And we can select a range on the widget which allows us to use `selected()`
+```js
+rituum.range( 5, 35 );
+```
